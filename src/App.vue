@@ -11,7 +11,7 @@ const userStore = useUserStore();
 
 const fetchBlog = async () => {
   try {
-    const res = await axios.get(`http://localhost:3000/api/v1/post`);
+    const res = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/v1/post`);
     const data = await res.data;
     console.log("fetched", data);
     blogStore.setBlogs(data.posts);
@@ -22,7 +22,7 @@ const fetchBlog = async () => {
 
 const fetchUser = async (token) => {
   try {
-    const res = await axios.get(`http://localhost:3000/api/v1/profile`, {
+    const res = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/v1/profile`, {
       headers: {
         'Authorization': `Bearer ${token}`
       }
