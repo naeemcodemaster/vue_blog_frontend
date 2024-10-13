@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --font-1:'Jost',sans-serif;
+    --bg-1: #4fb83a;
+    --bg-2: #46162d;
+}
+
+.f-1{
+    font-family: var(--font-1);
+}
+.bg-primary{
+    background-color: var(--bg-1);
+
+}
+.onHover-primary{
+    background-color: var(--bg-2);
+}
+.color-primary{
+    color:var(--bg-1)
+}
+
+#nprogress .bar{
+    background-color: var(--bg-1) !important;
+}
